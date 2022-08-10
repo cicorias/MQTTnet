@@ -19,9 +19,11 @@ namespace MQTTnet.TestApp
 
             var factory = new MqttFactory(logger);
             var server = factory.CreateMqttServer( new MqttServerOptionsBuilder().Build());
-            var client = factory.CreateMqttClient();
 
             await server.StartAsync();
+
+
+            var client = factory.CreateMqttClient();
 
             var clientOptions = new MqttClientOptionsBuilder().WithTcpServer("localhost").Build();
             await client.ConnectAsync(clientOptions);

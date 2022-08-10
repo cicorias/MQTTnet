@@ -52,9 +52,9 @@ namespace MQTTnet.TestApp
 
                 //var certificate = new X509Certificate(@"C:\certs\test\test.cer", "");
                 //options.TlsEndpointOptions.Certificate = certificate.Export(X509ContentType.Cert);
-                //options.ConnectionBacklog = 5;
-                //options.DefaultEndpointOptions.IsEnabled = true;
-                //options.TlsEndpointOptions.IsEnabled = false;
+                options.MaxPendingMessagesPerClient = 100; //.ConnectionBacklog = 5;
+                options.DefaultEndpointOptions.IsEnabled = true;
+                options.TlsEndpointOptions.IsEnabled = false;
 
                 var mqttServer = new MqttFactory().CreateMqttServer(options);
 
