@@ -11,9 +11,10 @@ namespace MQTTRelayApp
 
         async static void Startup()
         {
+
             Server server = Server.Instance;
 
-            await Task.Run(Server.Run_Minimal_Server);
+            await Task.Run(server.Run);
 
         }
     }

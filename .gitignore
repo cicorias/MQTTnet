@@ -296,3 +296,4 @@ __pycache__/
 Build/NuGet/
 
 Build/nuget.exe
+/Source/MQTTRelayApp/appsettings.dev.json
